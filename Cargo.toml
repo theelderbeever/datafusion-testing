@@ -1,0 +1,17 @@
+[package]
+name = "datafusion-testing"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = { version = "0.4.31", features = ["serde"] }
+# datafusion = { version = "32.0.0", git = "https://github.com/apache/arrow-datafusion.git", rev = "7acd8833cc5d03ba7643d4ae424553c7681ccce8" }
+datafusion = { version = "32.0.0", git = "https://github.com/devinjdangelo/arrow-datafusion.git", rev = "ba4917b0081e39d452959fe9d46e5812859ca5c5" }
+# deltalake = { version = "0.17.0", path = "/Users/taylorbeever/git/theelderbeever/delta-rs/rust", features = ["s3", "json", "datafusion"] }
+serde = { version = "1.0.189", features = ["derive"] }
+serde_arrow = { version = "0.8.0", features = ["arrow-46"] }
+serde_json = "1.0.107"
+time = { version = "0.3.30", features = ["formatting", "parsing", "serde", "serde-well-known", "macros"] }
+tokio = { version = "1.33.0", features = ["full"] }
